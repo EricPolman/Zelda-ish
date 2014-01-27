@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Template</ProjectName>
+    <ProjectGuid>{D8FE2186-4BF0-4B89-913F-6C26818E5AC5}</ProjectGuid>
+    <RootNamespace>tmpl8300c</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>lib\OpenGL;lib\sdl\include;lib\SDL_mixer\include;lib\freeimage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;sdl.lib;sdlmain.lib;sdl_mixer.lib;opengl32.lib;freeimage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\sdl\lib;lib\SDL_mixer\lib;lib\OpenGL;lib\freeimage;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>lib\OpenGL;lib\sdl\include;lib\SDL_mixer\include;lib\freeimage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;sdl.lib;sdlmain.lib;sdl_mixer.lib;opengl32.lib;freeimage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>lib\sdl\lib;lib\SDL_mixer\lib;lib\OpenGL;lib\freeimage;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Aganihm.cpp" />
+    <ClCompile Include="AnimatedSprite.cpp" />
+    <ClCompile Include="Boomerang.cpp" />
+    <ClCompile Include="ChestBig.cpp" />
+    <ClCompile Include="ChestSmall.cpp" />
+    <ClCompile Include="DarkForest.cpp" />
+    <ClCompile Include="DeathCloud.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyGoriya.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="FireBall.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="GameMenuState.cpp" />
+    <ClCompile Include="GamePlayingState.cpp" />
+    <ClCompile Include="GatePiece.cpp" />
+    <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="Heart.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Lightning.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="Rupee.cpp" />
+    <ClCompile Include="ShopItem.cpp" />
+    <ClCompile Include="ShopOwner.cpp" />
+    <ClCompile Include="Shrub.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Stats.cpp" />
+    <ClCompile Include="surface.cpp" />
+    <ClCompile Include="SwordSlash.cpp" />
+    <ClCompile Include="template.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TileManager.cpp" />
+    <ClCompile Include="TileNode.cpp" />
+    <ClCompile Include="TileSurface.cpp" />
+    <ClCompile Include="Trigger.cpp" />
+    <ClCompile Include="TriggerChest.cpp" />
+    <ClCompile Include="TriggerHomeCave.cpp" />
+    <ClCompile Include="TriggerHomeCaveExit.cpp" />
+    <ClCompile Include="TriggerManager.cpp" />
+    <ClCompile Include="TriggerMoneyCave.cpp" />
+    <ClCompile Include="TriggerMoneyCaveExit.cpp" />
+    <ClCompile Include="TriggerMoneyCaveTeleportDown.cpp" />
+    <ClCompile Include="TriggerMoneyCaveTeleportUp.cpp" />
+    <ClCompile Include="TriggerShopItem.cpp" />
+    <ClCompile Include="UserInterface.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aganihm.h" />
+    <ClInclude Include="AnimatedSprite.h" />
+    <ClInclude Include="Boomerang.h" />
+    <ClInclude Include="ChestBig.h" />
+    <ClInclude Include="ChestSmall.h" />
+    <ClInclude Include="DarkForest.h" />
+    <ClInclude Include="DeathCloud.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyGoriya.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="FireBall.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="GameMenuState.h" />
+    <ClInclude Include="GamePlayingState.h" />
+    <ClInclude Include="GatePiece.h" />
+    <ClInclude Include="Guard.h" />
+    <ClInclude Include="Heart.h" />
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Lightning.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Room.h" />
+    <ClInclude Include="Rupee.h" />
+    <ClInclude Include="ShopItem.h" />
+    <ClInclude Include="ShopOwner.h" />
+    <ClInclude Include="Shrub.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="Stats.h" />
+    <ClInclude Include="surface.h" />
+    <ClInclude Include="SwordSlash.h" />
+    <ClInclude Include="template.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TileManager.h" />
+    <ClInclude Include="TileNode.h" />
+    <ClInclude Include="TileSurface.h" />
+    <ClInclude Include="Trigger.h" />
+    <ClInclude Include="TriggerChest.h" />
+    <ClInclude Include="TriggerHomeCave.h" />
+    <ClInclude Include="TriggerHomeCaveExit.h" />
+    <ClInclude Include="TriggerManager.h" />
+    <ClInclude Include="TriggerMoneyCave.h" />
+    <ClInclude Include="TriggerMoneyCaveExit.h" />
+    <ClInclude Include="TriggerMoneyCaveTeleportDown.h" />
+    <ClInclude Include="TriggerMoneyCaveTeleportUp.h" />
+    <ClInclude Include="TriggerShopItem.h" />
+    <ClInclude Include="UserInterface.h" />
+    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
